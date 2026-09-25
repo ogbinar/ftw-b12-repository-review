@@ -607,7 +607,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <h1 id="how-to-read-this-review">HOW TO READ THIS REVIEW</h1>
 <p>This independent review was prepared for the <strong>FTW Batch 12 Databricks Data Engineering Bootcamp, sponsored by Accenture</strong>. It is not an official FTW Foundation or Accenture publication, endorsement, certification, or employment assessment.</p>
 <p>The review asks one question: <strong>Can another engineer understand, run, validate, and modify the project without relying on the original authors?</strong> It does <strong>not</strong> judge a student’s ability, effort, or career potential. A capable team can lose handoff points when setup knowledge is not recorded in the repository.</p>
-<p>The feedback names repository changes that another engineer could verify. Scores, ratings, verdicts, and technical findings are unchanged from the detailed reviews.</p>
+<p>The feedback names repository changes that another engineer could verify. Scores, handoff statuses, and technical findings are unchanged from the detailed reviews.</p>
 <div class="review-note">
 <p><strong>Scope rule.</strong> Results are shown only within each homework. No class-level summary statistics, combined assignment totals, or performance comparisons are provided.</p>
 </div>
@@ -619,7 +619,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <li><strong>Validation:</strong> checks for missing values, duplicates, broken relationships, or incorrect totals.</li>
 <li><strong>Runbook:</strong> exact setup and run instructions, including access, order, commands, and expected results.</li>
 <li><strong>Handoff:</strong> giving a project to someone who did not build it, with enough information to continue without guesswork.</li>
-<li><strong>Canonical path:</strong> the one official route to run when several versions or tools are present.</li>
+<li><strong>Official run path:</strong> the route a team designates when several versions or tools are present.</li>
 <li><strong>Gate / fail-fast check:</strong> a check that stops a run when it finds a serious defect instead of merely showing a warning.</li>
 <li><strong>Fact table:</strong> measurable events, such as purchased items or learning activity.</li>
 <li><strong>Dimension table:</strong> context for facts, such as products, customers, courses, or dates.</li>
@@ -698,20 +698,19 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </tr>
 </tbody>
 </table>
-<p>Verdicts keep their original meanings: <strong>Ready</strong> means the repository can be taken over independently; <strong>Ready with minor gaps</strong> means a limited issue remains; <strong>Not yet ready</strong> means another engineer would still need clarification or repair to run or modify the project reliably.</p>
+<p>Handoff statuses keep their original meanings: <strong>Ready</strong> means the repository can be taken over independently; <strong>Ready with minor gaps</strong> means a limited issue remains; <strong>Not yet ready</strong> means another engineer would still need clarification or repair to run or modify the project reliably.</p>
 <h1 id="chinook">CHINOOK</h1>
 <p><em>Music-store dimensional modeling and analytics</em></p>
 <p>This homework turns Chinook sales data into tables for analysis. We checked the path from source files to dashboards, the meaning of each sales row, the model choices, the run steps, and the checks.</p>
 <h2 id="ranking-for-this-assignment" class="anchored">RANKING FOR THIS ASSIGNMENT</h2>
-<p>This ranking applies only to this assignment. The <strong>rating</strong> comes from total rubric points. The <strong>verdict</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
+<p>This ranking applies only to this assignment. The score comes from the rubric. The <strong>handoff status</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">RANK</th>
 <th style="text-align: center;">GROUP</th>
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
@@ -719,42 +718,36 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: right;">91 / 100</td>
-<td>Excellent</td>
 <td>Ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: right;">84 / 100</td>
-<td>Good</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">E</td>
 <td style="text-align: right;">77 / 100</td>
-<td>Good</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: right;">76 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">B</td>
 <td style="text-align: right;">71 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">D</td>
 <td style="text-align: right;">59 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
@@ -766,14 +759,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>84 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -834,12 +825,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">6 / 10</td>
-<td>The history contains 117 commits and a few pull requests. These counts give context for iteration but do not show the quality of review.</td>
+<td>The history contains 117 commits and a few pull requests. This records iteration, but the counts do not establish review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes" class="anchored">REVIEW NOTES</h3>
-<p><strong>Review limitation:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
+<p><strong>Not tested:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
 <h2 id="group-b" class="anchored">GROUP B</h2>
 <p><code>ItsYangCoder/d3-chinook-dimensional-model</code><br>
 <a href="https://github.com/ItsYangCoder/d3-chinook-dimensional-model">Repository</a> · Assignment rank: <strong>5</strong></p>
@@ -847,14 +838,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>71 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -915,12 +904,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">7 / 10</td>
-<td>The history contains 67 commits, multiple branches, and pull-request activity. These signals suggest ongoing collaboration, but they do not establish review quality.</td>
+<td>The history contains 67 commits, multiple branches, and pull-request activity. These are workflow signals, not proof of collaboration or review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-1" class="anchored">REVIEW NOTES</h3>
-<p><strong>Review limitation:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
+<p><strong>Not tested:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
 <h2 id="group-c" class="anchored">GROUP C</h2>
 <p><code>jg0901/Week5-Chinook-Dimensional-Model</code><br>
 <a href="https://github.com/jg0901/Week5-Chinook-Dimensional-Model">Repository</a> · Assignment rank: <strong>4</strong></p>
@@ -928,14 +917,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>76 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1001,8 +988,9 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </tbody>
 </table>
 <h3 id="review-notes-2" class="anchored">REVIEW NOTES</h3>
-<p><strong>Could not check:</strong> The notebook was not executed because the required Databricks workspace, Unity Catalog objects, and external volume data are not available locally. Databricks-specific SQL semantics and saved results therefore could not be independently revalidated.</p>
-<p><strong>Review limitation:</strong> No source or workbook row-level PII is reproduced in this report.</p>
+<p><strong>Could not check:</strong> The notebook was not executed because the required Databricks workspace, Unity Catalog objects, and external volume data are not available locally.</p>
+<p><strong>Saved evidence:</strong> Databricks-specific SQL semantics and saved results therefore could not be independently revalidated.</p>
+<p><strong>Privacy note:</strong> No source or workbook row-level PII is reproduced in this report.</p>
 <p><strong>Version reviewed:</strong> Reviewed a fresh clone of the current <code>main</code> tip pinned above; Git object integrity, history, branches, contributors, notebook JSON structure, cell/object inventory, stored aggregate outputs, and SQL references were inspected statically.</p>
 <h2 id="group-d" class="anchored">GROUP D</h2>
 <p><code>lustrousiana/chinook-dimensional-model</code><br>
@@ -1011,14 +999,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>59 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1079,12 +1065,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">6 / 10</td>
-<td>The history contains 54 commits. It records some iteration, but provides limited evidence about collaboration or review quality.</td>
+<td>The history contains 54 commits and records some iteration. It provides little context about collaboration or review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-3" class="anchored">REVIEW NOTES</h3>
-<p><strong>Review limitation:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
+<p><strong>Not tested:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
 <h2 id="group-e" class="anchored">GROUP E</h2>
 <p><code>miabarroga-de/group-e-chinook-dimensional-model</code><br>
 <a href="https://github.com/miabarroga-de/group-e-chinook-dimensional-model">Repository</a> · Assignment rank: <strong>3</strong></p>
@@ -1092,14 +1078,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>77 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -1165,7 +1149,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </tbody>
 </table>
 <h3 id="review-notes-4" class="anchored">REVIEW NOTES</h3>
-<p><strong>Review limitation:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
+<p><strong>Not tested:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
 <h2 id="group-f" class="anchored">GROUP F</h2>
 <p><code>ocharlenemae/chinook-pipeline</code><br>
 <a href="https://github.com/ocharlenemae/chinook-pipeline">Repository</a> · Assignment rank: <strong>1</strong></p>
@@ -1173,14 +1157,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>91 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready</strong></td>
 </tr>
 </tbody>
@@ -1241,25 +1223,24 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">8 / 10</td>
-<td>The history contains 157 commits and a mature repository layout. This indicates many iterations, but commit counts alone do not show collaboration or review quality.</td>
+<td>The history contains 157 commits alongside a mature repository layout. The volume shows many recorded changes, not how well they were reviewed.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-5" class="anchored">REVIEW NOTES</h3>
-<p><strong>Review limitation:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
+<p><strong>Not tested:</strong> This report retains the score and observations from the original repository review. Databricks execution was not independently reproduced.</p>
 <h1 id="instacart">INSTACART</h1>
 <p><em>Grocery-order pipelines and dimensional modeling</em></p>
 <p>This homework organizes Instacart orders for analysis. We checked what one fact-table row represents, which order items are included, whether jobs can be repeated, and whether checks catch pipeline errors.</p>
 <h2 id="ranking-for-this-assignment-1" class="anchored">RANKING FOR THIS ASSIGNMENT</h2>
-<p>This ranking applies only to this assignment. The <strong>rating</strong> comes from total rubric points. The <strong>verdict</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
+<p>This ranking applies only to this assignment. The score comes from the rubric. The <strong>handoff status</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">RANK</th>
 <th style="text-align: center;">GROUP</th>
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
@@ -1267,42 +1248,36 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: right;">92 / 100</td>
-<td>Excellent</td>
 <td>Ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: right;">79 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">B</td>
 <td style="text-align: right;">77 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">D</td>
 <td style="text-align: right;">74 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: right;">68 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">E</td>
 <td style="text-align: right;">64 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
@@ -1314,14 +1289,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>92 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready</strong></td>
 </tr>
 </tbody>
@@ -1377,18 +1350,18 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Repository Organization</td>
 <td style="text-align: right;">4 / 5</td>
-<td>The numbered official path and separated docs/source/tests are excellent; a root dashboard export is marked as obsolete clutter.</td>
+<td>The numbered official run path and separated docs/source/tests make current files easy to locate; a root dashboard export is marked as obsolete clutter.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history includes incremental branches, merges, reviews, and shared ownership. Several vague <code>updated</code> messages make parts of the change history harder to follow.</td>
+<td>The history includes incremental branches, merges, review events, and shared ownership. Several vague <code>updated</code> messages make parts of the change history harder to follow; history alone cannot establish review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-6" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> All 10 notebook/dashboard JSON files parsed locally.</p>
-<p><strong>Could not check:</strong> Databricks SQL and source-data results were not rerun, so documented result counts were treated as repository evidence, not independently verified runtime facts.</p>
+<p><strong>Saved evidence:</strong> Databricks SQL and source-data results were not rerun, so documented result counts were treated as repository evidence, not independently verified runtime facts.</p>
 <h2 id="group-b-1" class="anchored">GROUP B</h2>
 <p><code>jess-christine/instacart-pipeline</code><br>
 <a href="https://github.com/jess-christine/instacart-pipeline.git">Repository</a> · Assignment rank: <strong>3</strong></p>
@@ -1396,14 +1369,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>77 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1464,7 +1435,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history includes descriptive fixes, feature branches, merges, and multiple contributors. These signals suggest active collaboration, although they do not by themselves show review quality.</td>
+<td>Descriptive fixes, feature branches, merges, and multiple contributors appear in the history. They document how work entered the repository, but not the quality of collaboration or review.</td>
 </tr>
 </tbody>
 </table>
@@ -1477,14 +1448,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>79 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1535,7 +1504,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Engineering Decisions</td>
 <td style="text-align: right;">10 / 10</td>
-<td>Trade-offs, non-decisions, failure investigations, and operational limitations are documented and technically grounded.</td>
+<td>Trade-offs, non-decisions, failure investigations, and run and support limitations are documented and technically grounded.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
@@ -1551,7 +1520,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </table>
 <h3 id="review-notes-8" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> All four notebook files parsed as JSON.</p>
-<p><strong>Review limitation:</strong> Lakeflow/Databricks SQL was reviewed statically only; pipeline state, checkpoints, audit rows, and the documented staged test runs were not independently reproduced.</p>
+<p><strong>Not tested:</strong> Lakeflow/Databricks SQL was reviewed statically only; pipeline state, checkpoints, audit rows, and the documented staged test runs were not independently reproduced.</p>
 <h2 id="group-d-1" class="anchored">GROUP D</h2>
 <p><code>nellaschema/instacart-dimensional-model</code><br>
 <a href="https://github.com/nellaschema/instacart-dimensional-model">Repository</a> · Assignment rank: <strong>4</strong></p>
@@ -1559,14 +1528,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>74 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1597,7 +1564,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
 <td style="text-align: right;">13 / 15</td>
-<td>Raw-to-dashboard flow, layer objects, and loading strategies are documented. Dependencies and the official choice between duplicate SQL/notebook paths are not.</td>
+<td>Raw-to-dashboard flow, layer objects, and loading strategies are documented. Dependencies and the official run path between duplicate SQL/notebook paths are not.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
@@ -1627,13 +1594,13 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history includes many merges, focused changes, reviews, and multiple contributors. These signals suggest active collaboration, but counts alone do not show review quality.</td>
+<td>Many merges, focused changes, review events, and multiple contributors are recorded. The history provides workflow context but cannot show review quality by itself.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-9" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> All five notebook/dashboard JSON files parsed.</p>
-<p><strong>Could not check:</strong> SQL was not executed in Databricks; the syntax defects above were identified by static inspection, and documented validation results were not independently rerun.</p>
+<p><strong>Not tested:</strong> SQL was not executed in Databricks; the syntax defects above were identified by static inspection, and documented validation results were not independently rerun.</p>
 <h2 id="group-e-1" class="anchored">GROUP E</h2>
 <p><code>anjelikamarquez/group-e-instacart</code><br>
 <a href="https://github.com/anjelikamarquez/group-e-instacart">Repository</a> · Assignment rank: <strong>6</strong></p>
@@ -1641,14 +1608,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>64 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1715,7 +1680,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </table>
 <h3 id="review-notes-10" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> All 30 notebook/dashboard JSON files parsed.</p>
-<p><strong>Could not check:</strong> Databricks execution was unavailable, so reported counts and the README’s stated <code>AnalysisException</code> were not independently reproduced; no saved notebook outputs were present.</p>
+<p><strong>Not tested:</strong> Databricks execution was unavailable, so reported counts and the README’s stated <code>AnalysisException</code> were not independently reproduced; no saved notebook outputs were present.</p>
 <h2 id="group-f-1" class="anchored">GROUP F</h2>
 <p><code>razzelleb/instacart-pipeline</code><br>
 <a href="https://github.com/razzelleb/instacart-pipeline">Repository</a> · Assignment rank: <strong>5</strong></p>
@@ -1723,14 +1688,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>68 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -1791,7 +1754,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history includes merged feature branches, focused commits, and several contributors. This suggests active collaboration, although the history alone cannot show review quality.</td>
+<td>Merged feature branches, focused commits, and several contributors are visible. These records show how changes were organized, not how effective the collaboration was.</td>
 </tr>
 </tbody>
 </table>
@@ -1802,15 +1765,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <p><em>Learning-analytics pipelines and fact constellations</em></p>
 <p>This homework prepares Open University learning data for analysis. We checked date rules, missing values, repeated activity, the difference between an enrollment and an event, and whether the repository provides one current run path.</p>
 <h2 id="ranking-for-this-assignment-2" class="anchored">RANKING FOR THIS ASSIGNMENT</h2>
-<p>This ranking applies only to this assignment. The <strong>rating</strong> comes from total rubric points. The <strong>verdict</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
+<p>This ranking applies only to this assignment. The score comes from the rubric. The <strong>handoff status</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">RANK</th>
 <th style="text-align: center;">GROUP</th>
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
@@ -1818,42 +1780,36 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">B</td>
 <td style="text-align: right;">91 / 100</td>
-<td>Excellent</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: right;">88 / 100</td>
-<td>Good</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: right;">80 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: right;">78 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">E</td>
 <td style="text-align: right;">77 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">D</td>
 <td style="text-align: right;">44 / 100</td>
-<td>Needs Improvement</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
@@ -1865,21 +1821,19 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>78 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>What works:</strong> The repository explains table grains and checks keys, allowed values, relationships, and click totals.</p>
 <p><strong>Main issue:</strong> The environment setup is incomplete and no single SQL, notebook, or dbt path is declared official.</p>
-<p><strong>Next step:</strong> Document exact setup commands and name one official implementation path.</p>
+<p><strong>Next step:</strong> Document exact setup commands and name one official run path.</p>
 <h3 id="score-breakdown-12" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -1939,8 +1893,8 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </table>
 <h3 id="review-notes-12" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> The clone passed Git object integrity; nine JSON/notebook/dashboard files and three YAML files parsed.</p>
-<p><strong>Could not check:</strong> Databricks SQL was not executed because the required catalog, Volume, warehouse, source files, and credentials were unavailable.</p>
-<p><strong>Review limitation:</strong> Notebook metadata contains execution counts but no saved outputs, so the documented DQ snapshot was not independently reproduced.</p>
+<p><strong>Saved evidence:</strong> Notebook metadata contains execution counts but no saved outputs, so the documented DQ snapshot was not independently reproduced.</p>
+<p><strong>Privacy note:</strong> Databricks SQL was not executed because the required catalog, Volume, warehouse, source files, and credentials were unavailable.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>76442d78d36ec521ff44a00b4699bb988e1fa679</code></p>
 <h2 id="group-b-2" class="anchored">GROUP B</h2>
 <p><code>ftw-week-07/OULAD-dimensional-model</code><br>
@@ -1949,14 +1903,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>91 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2012,7 +1964,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Repository Organization</td>
 <td style="text-align: right;">5 / 5</td>
-<td>Numbered official paths, supporting docs, tests, dbt, examples, and dashboard material are easy to navigate.</td>
+<td>Numbered official run paths, supporting docs, tests, dbt, examples, and dashboard material are easy to navigate.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
@@ -2023,7 +1975,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </table>
 <h3 id="review-notes-13" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> The clone passed Git object integrity; three JSON notebooks, four YAML files, five local Markdown links, and the Python checker itself loaded successfully. Python compilation passed. The repository checker failed only on the two path-contract mismatches above.</p>
-<p><strong>Review limitation:</strong> Databricks/dbt execution and the README-linked GitHub Actions result were not independently reproduced.</p>
+<p><strong>Not tested:</strong> Databricks/dbt execution and the README-linked GitHub Actions result were not independently reproduced.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>c17d4819c8b3bd147e7d52fe44a4bdd815a94b3b</code></p>
 <h2 id="group-c-2" class="anchored">GROUP C</h2>
 <p><code>ItsYangCoder/oulad-data-engineering-pipeline</code><br>
@@ -2032,14 +1984,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>88 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2100,13 +2050,13 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 137 commits and 23 merges across ten recorded author identities, with many focused incremental messages. These signals suggest active collaboration, but counts alone do not show review quality.</td>
+<td>The history contains 137 commits and 23 merges across ten recorded author identities, with many focused incremental messages. Those facts describe the workflow but do not establish review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-14" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> The clone passed Git object integrity; one standard notebook, nine YAML files, and seven local Markdown links parsed. No deployment workflow was triggered.</p>
-<p><strong>Review limitation:</strong> dbt and Databricks were not installed/configured locally, so the documented <code>PASS=132</code> run was treated as repository evidence, with the repo’s own caveat that it predates final integration.</p>
+<p><strong>Saved evidence:</strong> dbt and Databricks were not installed/configured locally, so the documented <code>PASS=132</code> run was treated as repository evidence, with the repo’s own caveat that it predates final integration.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>e4f58acc54f5752501553f0b051c3b24b3b4796e</code></p>
 <h2 id="group-d-2" class="anchored">GROUP D</h2>
 <p><code>catweyine/OULAD-Pipeline</code><br>
@@ -2115,14 +2065,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>44 / 100</strong></td>
-<td><strong>Needs Improvement</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -2198,14 +2146,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>77 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -2271,8 +2217,9 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </tbody>
 </table>
 <h3 id="review-notes-16" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> The clone passed Git object integrity; the one notebook parsed with all 12 cells marked executed but no saved outputs, and the Python source-inspection file compiled. Six local Markdown links were checked and the README data-model link was broken.</p>
-<p><strong>Could not check:</strong> Databricks SQL was not executed, so documented result tables and business findings were not independently reproduced.</p>
+<p><strong>Checked locally:</strong> Six local Markdown links were checked and the README data-model link was broken.</p>
+<p><strong>Not tested:</strong> Databricks SQL was not executed, so documented result tables and business findings were not independently reproduced.</p>
+<p><strong>Saved evidence:</strong> The clone passed Git object integrity; the one notebook parsed with all 12 cells marked executed but no saved outputs, and the Python source-inspection file compiled.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>e7d6f8177aeeab0c4cd68566ae9b7a3089098d01</code></p>
 <h2 id="group-f-2" class="anchored">GROUP F</h2>
 <p><code>annmargarettel/oulad-pipeline</code><br>
@@ -2281,14 +2228,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>80 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -2356,21 +2301,20 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <h3 id="review-notes-17" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> The clone passed Git object integrity; five notebooks and 20 local Markdown links parsed.</p>
 <p><strong>Could not check:</strong> Databricks SQL was not executed.</p>
-<p><strong>Review limitation:</strong> The incomplete validation state and defects are supported by the repository’s own <code>docs/validation.md</code> and <code>docs/decisions.md</code>, and were confirmed statically in the referenced SQL; their runtime impact was not independently measured.</p>
+<p><strong>Not tested:</strong> The incomplete validation state and defects are supported by the repository’s own <code>docs/validation.md</code> and <code>docs/decisions.md</code>, and were confirmed statically in the referenced SQL; their runtime impact was not independently measured.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>1459e9c12e8934d5d62aa220f833fde81cde1796</code></p>
 <h1 id="nyc-1-ingestion">NYC 1 — INGESTION</h1>
 <p><em>Week 8 source acquisition and reliable Bronze ingestion</em></p>
 <p>This homework covers ingestion: getting source data into the first managed layer reliably. We checked source expectations, acquisition, data origins, schemas, new-data loads, blocking checks, and evidence from a documented cutoff before Week 9 production work.</p>
 <h2 id="ranking-for-this-assignment-3" class="anchored">RANKING FOR THIS ASSIGNMENT</h2>
-<p>This ranking applies only to this assignment. The <strong>rating</strong> comes from total rubric points. The <strong>verdict</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
+<p>This ranking applies only to this assignment. The score comes from the rubric. The <strong>handoff status</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">RANK</th>
 <th style="text-align: center;">GROUP</th>
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
@@ -2378,42 +2322,36 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: right;">96 / 100</td>
-<td>Excellent</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td style="text-align: center;">B</td>
 <td style="text-align: right;">91 / 100</td>
-<td>Excellent</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: right;">87 / 100</td>
-<td>Good</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: right;">85 / 100</td>
-<td>Good</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">D</td>
 <td style="text-align: right;">75 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">E</td>
 <td style="text-align: right;">74 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
@@ -2425,14 +2363,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>96 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2493,13 +2429,13 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 232 commits and 48 merges across 12 recorded author identities. Frequent incremental commits and merged changes suggest active collaboration, although counts alone do not show review quality.</td>
+<td>The history contains 232 commits and 48 merges across 12 recorded author identities. Frequent incremental and merged changes provide workflow context; the counts do not measure collaboration or review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-18" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> Git integrity, eight JSON/notebook assets, three YAML files, seven Python files, and 18 local Markdown links passed; <code>pytest</code> reported 118 passed and one Databricks-only skip.</p>
-<p><strong>Could not check:</strong> Databricks, R2, Unity Catalog, and the source Volume were unavailable, so saved run IDs and counts were not independently reproduced.</p>
+<p><strong>Saved evidence:</strong> Databricks, R2, Unity Catalog, and the source Volume were unavailable, so saved run IDs and counts were not independently reproduced.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at ingestion cutoff <code>1ec3bb452fb3390d1c643753c4f4e345916b510b</code>. Reviewed the full history at the pre-productionization cutoff. The later Week 9 local gate, deploy, monitoring, and recovery work was excluded from this score.</p>
 <h2 id="group-b-3" class="anchored">GROUP B</h2>
 <p><code>ftw-group-b/NYC-Mobility-Ingestion-Challenge</code><br>
@@ -2508,14 +2444,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>91 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2591,14 +2525,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>87 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2659,7 +2591,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">8 / 10</td>
-<td>The history contains 34 commits and three merges across nine recorded author identities. Several people contributed, but the reviewed main history is short and counts alone do not show review quality.</td>
+<td>The history contains 34 commits and three merges across nine recorded author identities. Several recorded identities appear, but the reviewed main history is short and aliases may affect attribution.</td>
 </tr>
 </tbody>
 </table>
@@ -2674,14 +2606,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>75 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -2742,7 +2672,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 142 commits and 40 merges across 13 recorded author identities. Frequent merged changes suggest active collaboration, although counts alone do not show review quality.</td>
+<td>The history contains 142 commits and 40 merges across 13 recorded author identities. The merged changes show how work entered the branch, not the quality of collaboration or review.</td>
 </tr>
 </tbody>
 </table>
@@ -2757,14 +2687,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>74 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -2840,14 +2768,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>85 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -2920,15 +2846,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <p><em>Week 9 deployment, orchestration, controls, and operations</em></p>
 <p>This homework asks whether the pipeline can run reliably after handoff. We checked deployable jobs, task order, repeat runs, checks that stop bad data, recovery, monitoring, access controls, and results tied to a specific commit.</p>
 <h2 id="ranking-for-this-assignment-4" class="anchored">RANKING FOR THIS ASSIGNMENT</h2>
-<p>This ranking applies only to this assignment. The <strong>rating</strong> comes from total rubric points. The <strong>verdict</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
+<p>This ranking applies only to this assignment. The score comes from the rubric. The <strong>handoff status</strong> asks whether another engineer can take over now. A high score can still be <strong>Not yet ready</strong> when one essential run or deployment step is missing.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">RANK</th>
 <th style="text-align: center;">GROUP</th>
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
@@ -2936,42 +2861,36 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">B</td>
 <td style="text-align: right;">97 / 100</td>
-<td>Excellent</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: right;">93 / 100</td>
-<td>Excellent</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">E</td>
 <td style="text-align: right;">80 / 100</td>
-<td>Good</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: right;">63 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">F</td>
 <td style="text-align: right;">60 / 100</td>
-<td>Developing</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">D</td>
 <td style="text-align: right;">23 / 100</td>
-<td>Needs Improvement</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
@@ -2983,14 +2902,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>93 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -3026,7 +2943,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Data Model</td>
 <td style="text-align: right;">15 / 15</td>
-<td>Business and operational grains, keys, relationships, manifests, run audit, DQ results, and code-revision lineage are documented.</td>
+<td>Business and operational grains, keys, relationships, manifests, run audit, DQ results, and code changes tied to commits are documented.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
@@ -3036,7 +2953,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
 <td style="text-align: right;">15 / 15</td>
-<td>CI exercises clean, rerun, bad-delivery, fail-closed, and manifest behavior; layer gates and results tied to this commit are comprehensive.</td>
+<td>CI exercises clean, rerun, bad-delivery, fail-closed, and manifest behavior; layer gates cover each stage, and saved results identify the reviewed commit.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
@@ -3051,14 +2968,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 239 commits and 49 merges across 12 recorded author identities. Frequent incremental changes suggest active collaboration, although counts alone do not show review quality.</td>
+<td>The history contains 239 commits and 49 merges across 12 recorded author identities. Frequent incremental changes give development context, while counts alone say nothing about review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-24" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> Git integrity, nine JSON/notebook assets, four YAML files, 24 Python files, and 32 local Markdown links passed static checks.</p>
 <p><strong>Could not check:</strong> Local pytest collection stopped because <code>duckdb</code> was not installed in the audit environment; the dependency is pinned in <code>requirements-dev.txt</code>, and no global packages were changed.</p>
-<p><strong>Review limitation:</strong> Databricks validation/deployment and saved workspace run results were not independently reproduced.</p>
+<p><strong>Not tested:</strong> Databricks validation/deployment and saved workspace run results were not independently reproduced.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>8dc65ee1f1649d34d75a152c601476f5480e2fc0</code>. The default branch was pinned even though later work existed on non-default remote branches.</p>
 <h2 id="group-b-4" class="anchored">GROUP B</h2>
 <p><code>ftw-group-b/NYC-Mobility-Ingestion-Challenge</code><br>
@@ -3067,14 +2984,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>97 / 100</strong></td>
-<td><strong>Excellent</strong></td>
 <td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
@@ -3100,7 +3015,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
 <td style="text-align: right;">10 / 10</td>
-<td>The productionized pipeline, technologies, environments, quality gate, dashboards, and operating scope are documented.</td>
+<td>The productionized pipeline, technologies, environments, quality gate, dashboards, and local and Databricks responsibilities are documented.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
@@ -3120,7 +3035,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
 <td style="text-align: right;">15 / 15</td>
-<td>Unit/alignment checks, layer gates, 14 governed GX checks, fail-closed behavior, failure notification, recovery, and dashboard refresh evidence form a complete set of operational controls.</td>
+<td>Unit/alignment checks, layer gates, 14 governed GX checks, fail-closed behavior, failure notification, recovery, and dashboard refresh evidence form a complete deployment and data-quality checks.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
@@ -3141,7 +3056,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </table>
 <h3 id="review-notes-25" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> Git integrity passed. Twenty JSON/notebook/dashboard files, six YAML files, seven Python files, and 15 local links parsed. Repository unit/alignment checks reported 15 passed and 28 subtests passed.</p>
-<p><strong>Review limitation:</strong> No Databricks deployment or pipeline was triggered; recorded failure/recovery run IDs and screenshots are repository evidence.</p>
+<p><strong>Saved evidence:</strong> No Databricks deployment or pipeline was triggered; recorded failure/recovery run IDs and screenshots are repository evidence.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>9de52ee26e65f35e8d3749dfd0c658d3a157589e</code>. The pinned default branch excludes later non-main test commits.</p>
 <h2 id="group-c-4" class="anchored">GROUP C</h2>
 <p><code>mafelisilda/nyc-mobility</code><br>
@@ -3150,14 +3065,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>63 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -3233,14 +3146,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>23 / 100</strong></td>
-<td><strong>Needs Improvement</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -3316,14 +3227,12 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>80 / 100</strong></td>
-<td><strong>Good</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
@@ -3374,7 +3283,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Engineering Decisions</td>
 <td style="text-align: right;">8 / 10</td>
-<td>The docs candidly record overwrite/incremental, serverless/dlt, retry, schema-drift, and monitoring limitations, but several later control claims conflict with the actual job.</td>
+<td>The docs record overwrite/incremental, serverless/dlt, retry, schema-drift, and monitoring limitations, but several later control claims conflict with the actual job.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
@@ -3384,13 +3293,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 288 commits and 73 merges across 16 recorded author identities. Frequent merged changes suggest active collaboration, although counts alone do not show review quality.</td>
+<td>The history contains 288 commits and 73 merges across 16 recorded author identities. Frequent merged changes document workflow activity; they do not prove collaboration or review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-28" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> Git integrity, three YAML files, and tracked content parsed except <code>02_alert_dq_warnings.py</code>, whose leading Databricks <code>%python</code> directive is invalid to a local Python interpreter. One architecture link is broken. Repository pytest reported 22 passed, but the tests mainly inspect file presence/content and do not execute the Databricks DAG.</p>
-<p><strong>Review limitation:</strong> No deployment/job was run; saved DQ results remain repository evidence. Personal notification addresses present in the job were not reproduced in this report.</p>
+<p><strong>Saved evidence:</strong> No deployment/job was run; saved DQ results remain repository evidence.</p>
+<p><strong>Privacy note:</strong> Personal notification addresses present in the job were not reproduced in this report.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>862238d6b28eac0a32a6cd3e2256a3f27778b482</code></p>
 <h2 id="group-f-4" class="anchored">GROUP F</h2>
 <p><code>cricraps/w9-productionize-nyc-mobility</code><br>
@@ -3399,21 +3309,19 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <thead>
 <tr class="header">
 <th style="text-align: right;">SCORE</th>
-<th>RATING</th>
-<th>VERDICT</th>
+<th>HANDOFF STATUS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;"><strong>60 / 100</strong></td>
-<td><strong>Developing</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>What works:</strong> The README explains ownership, recovery, source schedules, and the intended deployment structure.</p>
 <p><strong>Main issue:</strong> The referenced job and workflow resources are missing, several links are broken, and the dbt path is unfinished.</p>
-<p><strong>Next step:</strong> Commit the missing resources, repair the links, and show one successful run through the official deployment path.</p>
+<p><strong>Next step:</strong> Commit the missing resources, repair the links, and show one successful run through the official run path.</p>
 <h3 id="score-breakdown-29" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -3474,13 +3382,13 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <h3 id="review-notes-29" class="anchored">REVIEW NOTES</h3>
 <p><strong>Checked locally:</strong> Git integrity passed. Twenty-three JSON/notebook assets, three YAML files, and three Python files parsed; seven local links are broken, including the parent README and missing <code>resources/traffic_advisory_daily.job.yml</code>. No <code>.github</code> workflow or <code>resources/</code> directory exists.</p>
 <p><strong>Could not check:</strong> <code>dbt</code> was not installed in the audit environment, and the committed dbt project retains starter documentation/configuration without a profile.</p>
-<p><strong>Review limitation:</strong> Databricks run IDs and outcomes were not independently verified.</p>
+<p><strong>Saved evidence:</strong> Databricks run IDs and outcomes were not independently verified.</p>
 <p><strong>Version reviewed:</strong> <code>main</code> at <code>ac2ec6d4d78067b4688a1f362b80cb66dd92acdb</code></p>
 <h1 id="practical-handoff-checklist">PRACTICAL HANDOFF CHECKLIST</h1>
 <p>Use this before the next repository handoff:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Open with the purpose, source, intended users, and outputs.</label></li>
-<li><label><input type="checkbox">Name one official pipeline path from source to final output.</label></li>
+<li><label><input type="checkbox">Name one official run path from source to final output.</label></li>
 <li><label><input type="checkbox">List prerequisites, permissions, tools, and source setup.</label></li>
 <li><label><input type="checkbox">Make catalog, schema, and file paths configurable.</label></li>
 <li><label><input type="checkbox">Give exact commands or real files in exact run order.</label></li>
