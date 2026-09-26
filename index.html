@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Independent repository handoff assessment">
-<meta name="dcterms.date" content="2026-09-25">
+<meta name="dcterms.date" content="2026-09-26">
 
 <title>INDEPENDENT REPOSITORY REVIEW — PREPARED FOR FTW BATCH 12</title>
 <style>
@@ -538,7 +538,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <p class="subtitle">A learner-friendly assessment of repository handoff quality</p>
 <p class="author">Independent repository handoff assessment</p>
 
-<p class="date">2026-09-25</p>
+<p class="date">2026-09-26</p>
 </header>
 
 <nav id="TOC" role="doc-toc">
@@ -2859,45 +2859,45 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
-<td style="text-align: center;">B</td>
-<td style="text-align: right;">97 / 100</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">98 / 100</td>
 <td>Ready with minor gaps</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: center;">A</td>
-<td style="text-align: right;">93 / 100</td>
-<td>Not yet ready</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">97 / 100</td>
+<td>Ready with minor gaps</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
 <td style="text-align: center;">E</td>
-<td style="text-align: right;">80 / 100</td>
+<td style="text-align: right;">88 / 100</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
 <td style="text-align: center;">C</td>
-<td style="text-align: right;">63 / 100</td>
+<td style="text-align: right;">80 / 100</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
 <td style="text-align: center;">F</td>
-<td style="text-align: right;">60 / 100</td>
+<td style="text-align: right;">64 / 100</td>
 <td>Not yet ready</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
 <td style="text-align: center;">D</td>
-<td style="text-align: right;">23 / 100</td>
+<td style="text-align: right;">45 / 100</td>
 <td>Not yet ready</td>
 </tr>
 </tbody>
 </table>
 <h2 id="group-a-4" class="anchored">GROUP A</h2>
-<p><code>hyenalouise/nyc-mobility-pipeline-extension</code><br>
-<a href="https://github.com/hyenalouise/nyc-mobility-pipeline-extension">Repository</a> · Assignment rank: <strong>2</strong></p>
+<p><code>hyenalouise/nyc-mobility-pipeline</code><br>
+<a href="https://github.com/hyenalouise/nyc-mobility-pipeline">Repository</a> · Assignment rank: <strong>1</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -2907,14 +2907,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><strong>93 / 100</strong></td>
-<td><strong>Not yet ready</strong></td>
+<td style="text-align: right;"><strong>98 / 100</strong></td>
+<td><strong>Ready with minor gaps</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What works:</strong> The repository includes a local production gate, run audit, tests, recovery guidance, and continuous-integration checks.</p>
-<p><strong>Main issue:</strong> <code>databricks.yml</code> has no <code>targets:</code> section, so the documented deployment command cannot run as written.</p>
-<p><strong>Next step:</strong> Add development and production targets, then save a successful bundle validation or deployment result.</p>
+<p><strong>What works:</strong> The repository connects source gates, layer checks, development and production deployment, monitoring, recovery, and results tied to specific code revisions.</p>
+<p><strong>Main issue:</strong> The current bundle runs Friday at 11:40 New York time, but the decision and operator documents still say 11:30.</p>
+<p><strong>Next step:</strong> Choose the intended time, align the bundle and documents, and add a test that pins the agreed schedule.</p>
 <h3 id="score-breakdown-24" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -2933,53 +2933,54 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
 <td style="text-align: right;">10 / 10</td>
-<td>The production objective, local/Databricks boundary, sources, outputs, controls, and known limitations are documented.</td>
+<td>The README states the production objective, sources, business questions, outputs, local/Databricks boundary, implemented controls, evidence boundary, and known limitations.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
 <td style="text-align: right;">15 / 15</td>
-<td>Source contract, audit store, full Databricks DAG, gates, dashboards, deployment, and recovery flow are mapped in detail.</td>
+<td>The repository maps source-specific DuckDB gates through Control, Bronze, Silver, Integration, Gold, Analytics, dashboards, deployment, monitoring, and recovery, with an executable dependency graph.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
 <td style="text-align: right;">15 / 15</td>
-<td>Business and operational grains, keys, relationships, manifests, run audit, DQ results, and code changes tied to commits are documented.</td>
+<td>Fact and dimension grains, deterministic keys, role-playing relationships, operational tables, quality results, lineage, field mappings, and measure rules are documented.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
-<td style="text-align: right;">14 / 20</td>
-<td>The local gate has exact commands and the Databricks job is fully enumerated, but the submitted bundle has no <code>targets:</code> block, so the documented CD path cannot validate or deploy as written.</td>
+<td style="text-align: right;">19 / 20</td>
+<td>Local checks, CLI setup, bundle validation, approved deployment, execution, verification, and recovery have exact commands and prerequisites. The tip’s 11:40 schedule conflicts with the 11:30 decision and operator documentation.</td>
 </tr>
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
 <td style="text-align: right;">15 / 15</td>
-<td>CI exercises clean, rerun, bad-delivery, fail-closed, and manifest behavior; layer gates cover each stage, and saved results identify the reviewed commit.</td>
+<td>Three pre-Bronze gates, layer-specific blocking checks, contract tests, dashboards, reconciliation, idempotency, failure, and recovery evidence cover the handoff; 358 tests passed locally and one was skipped.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
-<td style="text-align: right;">10 / 10</td>
-<td>The repository explains why DuckDB is narrowly used, why code is commit-pinned, what remains manual, and where the design is intentionally incomplete.</td>
+<td style="text-align: right;">9 / 10</td>
+<td>A detailed decision log explains source scope, grains, reruns, quarantine, time zones, code pinning, deployment, and monitoring trade-offs. The latest schedule change has no aligned decision or documentation update.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
 <td style="text-align: right;">5 / 5</td>
-<td>Operational code, ETL, configuration, tests, run results, dashboards, and documentation are clearly separated and indexed.</td>
+<td>Canonical docs, ETL stages, configuration, source-gate code, tests, dashboards, and evidence are separated and indexed with directory guides.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
-<td style="text-align: right;">9 / 10</td>
-<td>The history contains 239 commits and 49 merges across 12 recorded author identities. Frequent incremental changes give development context, while counts alone say nothing about review quality.</td>
+<td style="text-align: right;">10 / 10</td>
+<td>The history contains 373 commits and 80 merges across 16 recorded author identities. Focused issue and pull-request work records sustained shared productionization; counts provide context rather than a measure of collaboration quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-24" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> Git integrity, nine JSON/notebook assets, four YAML files, 24 Python files, and 32 local Markdown links passed static checks.</p>
-<p><strong>Could not check:</strong> Local pytest collection stopped because <code>duckdb</code> was not installed in the audit environment; the dependency is pinned in <code>requirements-dev.txt</code>, and no global packages were changed.</p>
-<p><strong>Not tested:</strong> Databricks validation/deployment and saved workspace run results were not independently reproduced.</p>
-<p><strong>Version reviewed:</strong> <code>main</code> at <code>8dc65ee1f1649d34d75a152c601476f5480e2fc0</code>. The default branch was pinned even though later work existed on non-default remote branches.</p>
+<p><strong>Checked locally:</strong> Git integrity passed. Twelve JSON/notebook/dashboard assets and four YAML files parsed; 20 Python files compiled; 123 local Markdown links resolved. In a temporary virtual environment using the pinned requirements, pytest reported 358 passed and one skipped.</p>
+<p><strong>Could not check:</strong> The retired extension remote remained unavailable; issue 116 and the successor’s history support consolidation of work, not literal repository or commit transfer.</p>
+<p><strong>Not tested:</strong> The audit environment had no Databricks CLI or authorized access to the class workspace, catalogs, Volumes, warehouse, GitHub environments, and source data, so bundle validation, deployment, SQL execution, dashboards, alerts, permissions, and the current scheduled run were not independently reproduced.</p>
+<p><strong>Saved evidence:</strong> Saved run IDs, screenshots, counts, and PASS records were treated as repository evidence at their stated revisions.</p>
+<p><strong>Version reviewed:</strong> <code>main</code> at <code>c8874d61806dedd1ac213b32957a8e442ef8e923</code></p>
 <h2 id="group-b-4" class="anchored">GROUP B</h2>
 <p><code>ftw-group-b/NYC-Mobility-Ingestion-Challenge</code><br>
-<a href="https://github.com/ftw-group-b/NYC-Mobility-Ingestion-Challenge">Repository</a> · Assignment rank: <strong>1</strong></p>
+<a href="https://github.com/ftw-group-b/NYC-Mobility-Ingestion-Challenge">Repository</a> · Assignment rank: <strong>2</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -3070,14 +3071,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><strong>63 / 100</strong></td>
+<td style="text-align: right;"><strong>80 / 100</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What works:</strong> The repository contains layered transformation code, assertion gates, and focused tests.</p>
-<p><strong>Main issue:</strong> It has no committed job or bundle that connects those components into a deployable run.</p>
-<p><strong>Next step:</strong> Commit the job or bundle and save one successful integrated run tied to this commit.</p>
+<p><strong>What works:</strong> The new README maps the sources, layers, table grains, quality policy, tests, analytics queries, and monitoring dashboard.</p>
+<p><strong>Main issue:</strong> The repository still has no committed job or bundle that connects the validation gates to a deployable workflow.</p>
+<p><strong>Next step:</strong> Commit that job or bundle and save one run showing a failed gate, blocked downstream work, and a successful rerun.</p>
 <h3 id="score-breakdown-26" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -3095,50 +3096,50 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tbody>
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
-<td style="text-align: right;">4 / 10</td>
-<td><code>README.md</code> is empty; purpose and production claims are recoverable only by finding the 667-line architecture document.</td>
+<td style="text-align: right;">9 / 10</td>
+<td><code>README.md</code> now explains the sources, business questions, layers, quarantine policy, testing, monitoring, and current March-May 2026 scope.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
-<td style="text-align: right;">12 / 15</td>
-<td>Architecture explains parallel ingestion, Bronze/Silver/Gold gates, recovery, monitoring, governance, and deployment flow, but no committed job definition implements the claimed DAG.</td>
+<td style="text-align: right;">13 / 15</td>
+<td>The README and architecture document describe parallel ingestion and Bronze/Silver/Gold gates, but no committed Databricks job or bundle implements the illustrated dependency graph.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
-<td style="text-align: right;">13 / 15</td>
-<td>Gold grains, keys, role-playing relationships, measures, and data dictionary are documented; weather match/unmatched behavior is left for code inspection.</td>
+<td style="text-align: right;">14 / 15</td>
+<td>Fact and dimension grains, keys, role-playing relationships, measures, weather matching, and field definitions are documented, with a committed model image and data dictionary.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
-<td style="text-align: right;">6 / 20</td>
-<td>Code and numbered notebooks exist, but there is no top-level runbook, source-path/configuration guide, Databricks bundle/job, deploy command, schedule, alert setup, or exact operator sequence.</td>
+<td style="text-align: right;">9 / 20</td>
+<td>Numbered notebooks, reusable code, dependencies, and a pytest command are present. There is still no deployable job, environment target, schedule, alert setup, deployment command, or exact integrated Databricks run sequence.</td>
 </tr>
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
-<td style="text-align: right;">12 / 15</td>
-<td>Dedicated Bronze/Silver/Gold assertion gates and Spark unit tests cover important behavior, but no integrated run tied to this commit or deployed gate results are saved.</td>
+<td style="text-align: right;">14 / 15</td>
+<td>Bronze/Silver/Gold validation programs, quarantine logic, focused Spark tests, analytics queries, and a dashboard asset are committed. The gates are not connected to a submitted job, and no integrated run tied to this SHA is saved.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
-<td style="text-align: right;">8 / 10</td>
-<td>Idempotency, trip identity, invalid filtering, weather join, keys, dimensions, and overwrite choices are explained; production trade-offs are less complete.</td>
+<td style="text-align: right;">9 / 10</td>
+<td>Idempotency, deterministic rebuilds, trip identity, quarantine versus failure, weather enrichment, dimensional choices, and recovery are explained with useful trade-offs.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
-<td style="text-align: right;">4 / 5</td>
-<td>Source, notebooks, validation, tests, and docs are cleanly separated, but the empty README makes discovery unnecessarily difficult.</td>
+<td style="text-align: right;">5 / 5</td>
+<td>The README now provides a working entry point to the separated source, notebooks, validation, tests, analytics, dashboard, and documentation.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
-<td style="text-align: right;">4 / 10</td>
-<td>The history contains 78 linear commits from five recorded authors. The lack of merges and concentration of changes provide limited evidence about review and collaboration.</td>
+<td style="text-align: right;">7 / 10</td>
+<td>The history contains 99 commits and three merges across nine recorded identities. Recent focused commits and merged changes show how the update entered main; aliases limit attribution, and the counts do not establish review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-26" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> Git integrity, one YAML file, and 34 Python files passed static parsing; the README is zero bytes. No Databricks job/bundle, deployment workflow, dashboard asset, or run evidence was found at the pinned main SHA.</p>
-<p><strong>Could not check:</strong> Pytest could not load because <code>pyspark</code> was unavailable in the audit environment.</p>
-<p><strong>Version reviewed:</strong> <code>main</code> at <code>d548258e74f2192638e892d21362d932306d8b2d</code>. Later non-default-branch commits were not included.</p>
+<p><strong>Checked locally:</strong> Git integrity passed. Thirty-nine tracked Python, JSON/notebook, and YAML files parsed, and all seven local Markdown links resolved. No Databricks job, bundle, deployment target, or integrated run result was found at the pinned SHA.</p>
+<p><strong>Could not check:</strong> Pytest could not collect because <code>pyspark</code> is unavailable in the review environment; this is a blocked check, not a failed test run. A Databricks workflow was not executed.</p>
+<p><strong>Version reviewed:</strong> <code>main</code> at <code>51f890d6fbc3e6e96b2c2fe814647e1e0488b463</code></p>
 <h2 id="group-d-4" class="anchored">GROUP D</h2>
 <p><code>go-viaaa/NYC-Mobility-extension</code><br>
 <a href="https://github.com/go-viaaa/NYC-Mobility-extension">Repository</a> · Assignment rank: <strong>6</strong></p>
@@ -3151,14 +3152,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><strong>23 / 100</strong></td>
+<td style="text-align: right;"><strong>45 / 100</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What works:</strong> The extension note names relevant production concerns, including jobs, monitoring, testing, and deployment.</p>
-<p><strong>Main issue:</strong> At this commit, four core documents are blank and no runnable implementation or tests are present.</p>
-<p><strong>Next step:</strong> Build one runnable path with deployment configuration, a blocking quality check, tests, and run evidence.</p>
+<p><strong>What works:</strong> The formerly blank documents now describe deployment, monitoring, governance, quality gates, and recovery actions.</p>
+<p><strong>Main issue:</strong> The jobs, workflows, bundle, checks, tests, and dashboards named in those documents are not present in this repository.</p>
+<p><strong>Next step:</strong> Commit the referenced implementation here, or pin the exact external revision that contains it, then demonstrate one blocking gate.</p>
 <h3 id="score-breakdown-27" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -3176,50 +3177,51 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tbody>
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
-<td style="text-align: right;">7 / 10</td>
-<td>The README states a reliability and automation goal, but gives no repository-specific inputs, outputs, status, or entry points.</td>
+<td style="text-align: right;">8 / 10</td>
+<td>The README identifies the source pipeline, productionization goals, active external branch, and documentation areas, but its links are Google-search redirects rather than direct repository paths.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
-<td style="text-align: right;">2 / 15</td>
-<td>The architecture file is blank and the extension note contains only generic claims about an existing pipeline.</td>
+<td style="text-align: right;">8 / 15</td>
+<td>A detailed medallion flow and architecture image now describe sources, gates, Gold tables, and dashboards. The job, bundle, quality code, and external pipeline revision named by the documents are not committed or pinned here.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
-<td style="text-align: right;">1 / 15</td>
-<td>No tables, grains, keys, relationships, or operational state model are documented.</td>
+<td style="text-align: right;">6 / 15</td>
+<td>Layer and table names, lineage, key-generation concerns, and some required tables are described, but complete grains, keys, relationships, and field definitions are not supplied in this repository.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
-<td style="text-align: right;">0 / 20</td>
-<td>There is no code, workflow, dependency file, configuration, command, job, or deployment instruction.</td>
+<td style="text-align: right;">4 / 20</td>
+<td>The delivery document provides bundle commands and a task DAG, but every referenced workflow, bundle, job, test, and dashboard file is absent. The document also records a CI formatting failure and a deployment failure caused by a missing token.</td>
 </tr>
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
-<td style="text-align: right;">1 / 15</td>
-<td>pytest and GX are described conceptually, but no tests, expectations, gates, results, or evidence are present.</td>
+<td style="text-align: right;">4 / 15</td>
+<td>Monitoring documents define statuses, thresholds, gates, and claimed SQL/GX checks. No check implementation, expectation suite, test, result file, or executable gate is present at this SHA.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
-<td style="text-align: right;">7 / 10</td>
-<td>The note gives a sensible rationale for not adding dbt, DLT, or DuckDB and for avoiding overlapping tools, but cannot link the choices to implementation.</td>
+<td style="text-align: right;">8 / 10</td>
+<td>Recovery, UTC use, deterministic keys, <code>MERGE</code>, restore/truncate choices, report-only versus blocking GX behavior, and the decision not to add overlapping tools are discussed in useful detail.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
-<td style="text-align: right;">2 / 5</td>
-<td>Seven files are easy to scan, but four promised deliverables are blank and there is no implementation tree.</td>
+<td style="text-align: right;">3 / 5</td>
+<td>The documentation set is now populated and ordered, but malformed Markdown, search-result links, citation artifacts, and references to absent implementation paths make navigation unreliable.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
-<td style="text-align: right;">3 / 10</td>
-<td>Thirteen small commits record the scaffold and later note revision under one author identity. The history does not provide evidence of multi-person review.</td>
+<td style="text-align: right;">4 / 10</td>
+<td>The history contains 45 commits and one merge across two recorded identities. It shows iterative documentation work, not whether the absent implementation was reviewed.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-27" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> Git integrity passed. <code>01-architecture.md</code>, <code>02-monitoring.md</code>, <code>03-governance.md</code>, and <code>04-recovery-strategy.md</code> contain only a newline; there are no parseable code/configuration assets or local tests.</p>
-<p><strong>Could not check:</strong> No external pipeline repository is linked or pinned as evidence, so generic implementation claims could not be verified.</p>
-<p><strong>Version reviewed:</strong> <code>main</code> at <code>a1ad3f35071b4bfe1d85ab204564730e6b6200e8</code></p>
+<p><strong>Checked locally:</strong> Git integrity passed. The repository contains seven Markdown documents, one diagram, and no parseable code, configuration, or tests.</p>
+<p><strong>Not tested:</strong> Databricks and GitHub Actions runs were not independently checked; the CI and deployment failures above are the submission’s own recorded results.</p>
+<p><strong>Saved evidence:</strong> The review did not treat claims about the unpinned <code>JoanMaquinano/NYC-Mobility</code> branch as repository evidence because the referenced files are absent here.</p>
+<p><strong>Version reviewed:</strong> <code>main</code> at <code>0710b19aa9c670f15e2fc3eb3f564439206c19d5</code></p>
 <h2 id="group-e-4" class="anchored">GROUP E</h2>
 <p><code>saraevcldn/NEW-NYC-MOBILITY-PIPELINE</code><br>
 <a href="https://github.com/saraevcldn/NEW-NYC-MOBILITY-PIPELINE">Repository</a> · Assignment rank: <strong>3</strong></p>
@@ -3232,14 +3234,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><strong>80 / 100</strong></td>
+<td style="text-align: right;"><strong>88 / 100</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What works:</strong> The repository commits a bundle, scheduled job, retries, alerts, tests, and operating documentation.</p>
-<p><strong>Main issue:</strong> The deployed job does not run the data-quality scripts described as production gates.</p>
-<p><strong>Next step:</strong> Add those scripts as blocking job dependencies before Gold and Analytics, then save a failure-and-recovery run.</p>
+<p><strong>What works:</strong> The 23-task job now runs three Silver quality checks before dependent Gold work, raises on failures, and includes quarantine, monitoring, retries, alerts, and a monthly schedule.</p>
+<p><strong>Main issue:</strong> Fixed profile and warehouse settings plus separately run weather ingestion still require setup knowledge outside the repository.</p>
+<p><strong>Next step:</strong> Parameterize the environment and make weather ingestion an enforced prerequisite, then save a run of the revised job.</p>
 <h3 id="score-breakdown-28" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -3258,50 +3260,51 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
 <td style="text-align: right;">9 / 10</td>
-<td>Purpose, sources, layers, outcomes, owners, and current manual-DQ limitation are stated.</td>
+<td>Purpose, sources, layers, outcomes, owners, deployment flow, and the external weather-ingestion constraint are stated.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
-<td style="text-align: right;">13 / 15</td>
-<td>Bundle/job resources define a real setup-to-analytics graph, including an external dlt weather path; DQ/quarantine/monitoring controls are not connected to the submitted job.</td>
+<td style="text-align: right;">14 / 15</td>
+<td>The bundle now defines a 23-task scheduled graph with cleaning checks, quarantine, monitoring, and analytics dependencies. Weather ingestion still runs separately in GitHub Actions, so the scheduled job does not itself guarantee fresh weather Bronze data.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
 <td style="text-align: right;">13 / 15</td>
-<td>Star-schema grains, keys, lineage, and known composite-key limitations are documented, though naming and original-versus-dlt paths compete.</td>
+<td>Star-schema grains, keys, lineage, and composite-key limitations are documented, though original and dlt table paths still coexist.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
-<td style="text-align: right;">14 / 20</td>
-<td>CI/CD, bundle targets, retry policy, job navigation, and recovery steps are documented; hard-coded profile/warehouse IDs, environment assumptions, and no automated run after deploy limit reproducibility.</td>
+<td style="text-align: right;">16 / 20</td>
+<td>Dev/prod targets, CI/CD, a monthly schedule, retries, failure email, job navigation, and recovery steps are present. A personal production profile, fixed warehouse IDs, shared object names, and the separate weather prerequisite still require environment-specific edits or coordination.</td>
 </tr>
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
-<td style="text-align: right;">10 / 15</td>
-<td>Broad checks, quarantine logic, warning monitoring, saved PASS reports, and 22 local structural tests exist, but the deployed DAG runs none of the DQ scripts.</td>
+<td style="text-align: right;">14 / 15</td>
+<td>Three Silver checks now run as job tasks, write audit rows, raise on <code>FAIL</code>, gate Gold dependencies, and trigger <code>ALL_DONE</code> quarantine tasks. Saved DQ results and 22 structural tests remain, but Gold checks are not in the job and no run of the revised 23-task graph is saved.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
-<td style="text-align: right;">8 / 10</td>
-<td>The docs record overwrite/incremental, serverless/dlt, retry, schema-drift, and monitoring limitations, but several later control claims conflict with the actual job.</td>
+<td style="text-align: right;">9 / 10</td>
+<td>The repository records overwrite/incremental choices, serverless/dlt constraints, retry behavior, quarantine, blocking versus warning rules, recovery, and known limits.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
 <td style="text-align: right;">4 / 5</td>
-<td>The expanded code/docs structure is navigable, but <code>doc/</code>/<code>docs/</code>, duplicate original/dlt paths, and an invalid local <code>%python</code> file create ambiguity.</td>
+<td>The code, resources, tests, and operating docs are navigable, but <code>doc/</code> versus <code>docs/</code>, duplicate original/dlt paths, and the broken <code>docs/architecture.md</code> link still create ambiguity.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The history contains 288 commits and 73 merges across 16 recorded author identities. Frequent merged changes document workflow activity; they do not prove collaboration or review quality.</td>
+<td>The history contains 296 commits and 75 merges across 16 recorded identities. The latest gate and schedule changes include focused commits and merges; aliases limit attribution, and counts do not prove review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-28" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> Git integrity, three YAML files, and tracked content parsed except <code>02_alert_dq_warnings.py</code>, whose leading Databricks <code>%python</code> directive is invalid to a local Python interpreter. One architecture link is broken. Repository pytest reported 22 passed, but the tests mainly inspect file presence/content and do not execute the Databricks DAG.</p>
-<p><strong>Saved evidence:</strong> No deployment/job was run; saved DQ results remain repository evidence.</p>
-<p><strong>Privacy note:</strong> Personal notification addresses present in the job were not reproduced in this report.</p>
-<p><strong>Version reviewed:</strong> <code>main</code> at <code>862238d6b28eac0a32a6cd3e2256a3f27778b482</code></p>
+<p><strong>Checked locally:</strong> Git integrity and static parsing passed for the tracked YAML, Python, JSON, and notebook assets. All 23 job tasks had valid dependencies and existing file targets. Repository pytest reported 22 passed; these tests inspect file content and structure rather than execute the Databricks graph. One architecture link remains broken.</p>
+<p><strong>Could not check:</strong> The Databricks CLI was unavailable, so bundle validation and the revised scheduled job were not run.</p>
+<p><strong>Saved evidence:</strong> Saved DQ reports were reviewed as repository evidence and were not independently rerun; no integrated result tied to this new SHA was found.</p>
+<p><strong>Privacy note:</strong> Personal notification addresses were not reproduced.</p>
+<p><strong>Version reviewed:</strong> <code>main</code> at <code>0fa15f52b9f40b5fb70e93d94606e3de93294d06</code></p>
 <h2 id="group-f-4" class="anchored">GROUP F</h2>
 <p><code>cricraps/w9-productionize-nyc-mobility</code><br>
 <a href="https://github.com/cricraps/w9-productionize-nyc-mobility">Repository</a> · Assignment rank: <strong>5</strong></p>
@@ -3314,14 +3317,14 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><strong>60 / 100</strong></td>
+<td style="text-align: right;"><strong>64 / 100</strong></td>
 <td><strong>Not yet ready</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What works:</strong> The README explains ownership, recovery, source schedules, and the intended deployment structure.</p>
-<p><strong>Main issue:</strong> The referenced job and workflow resources are missing, several links are broken, and the dbt path is unfinished.</p>
-<p><strong>Next step:</strong> Commit the missing resources, repair the links, and show one successful run through the official run path.</p>
+<p><strong>What works:</strong> The new recovery guide explains dataset-specific failures, reruns, and the limited role proposed for dbt.</p>
+<p><strong>Main issue:</strong> The referenced traffic job and deployment workflow are still missing, and seven local links are broken.</p>
+<p><strong>Next step:</strong> Commit those resources, repair the links, and save one end-to-end job run through the official run path.</p>
 <h3 id="score-breakdown-29" class="anchored">SCORE BREAKDOWN</h3>
 <table class="caption-top">
 <colgroup>
@@ -3340,50 +3343,49 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 <tr class="odd">
 <td>Purpose &amp; Overview</td>
 <td style="text-align: right;">9 / 10</td>
-<td>The productionization checklist and source-specific operational goals are documented, but the opening links to a nonexistent parent README.</td>
+<td>The productionization checklist and source-specific goals are direct, but several root-relative references still resolve outside this repository.</td>
 </tr>
 <tr class="even">
 <td>Architecture &amp; Data Flow</td>
 <td style="text-align: right;">10 / 15</td>
-<td>Version/deploy, orchestration, recovery, monitoring, and governance are described, but the only claimed scheduled job definition is absent.</td>
+<td>Version/deploy, source-specific scheduling, recovery, monitoring, governance, and the traffic-advisory DAG are described, but the claimed scheduled job definition is absent.</td>
 </tr>
 <tr class="odd">
 <td>Data Model</td>
 <td style="text-align: right;">10 / 15</td>
-<td>Week 8 model documentation remains available, but production changes introduce dbt alongside notebooks without a documented official transformation path.</td>
+<td>The renamed Week 8 model documentation remains available, and the new dbt note clarifies that notebooks remain the current path. Some documentation links and dbt source definitions still compete or fail.</td>
 </tr>
 <tr class="even">
 <td>How to Run</td>
-<td style="text-align: right;">5 / 20</td>
-<td>Feature/testing/main workflow is explained, yet there is no CI workflow, bundle resource, referenced traffic job, valid parent runbook link, dbt profile/setup, or complete deployment command.</td>
+<td style="text-align: right;">6 / 20</td>
+<td>The feature/testing/main workflow, recovery cases, and intended job are documented. There is still no CI workflow, bundle resource, traffic job, complete deployment command, or usable dbt connection/profile setup.</td>
 </tr>
 <tr class="odd">
 <td>Validation &amp; Data Quality</td>
-<td style="text-align: right;">8 / 15</td>
-<td>Source-specific fail rules and validation SQL cover important failure conditions, but the claimed job-level enforcement/evidence cannot be traced to committed resources and dbt could not be invoked.</td>
+<td style="text-align: right;">9 / 15</td>
+<td>Source-specific stop rules, validation SQL, recovery cases, and claimed dbt results are concrete. The job-level enforcement and reported dbt run cannot be traced to committed job resources or independently rerun.</td>
 </tr>
 <tr class="even">
 <td>Engineering Decisions</td>
-<td style="text-align: right;">8 / 10</td>
-<td>Scheduling by recoverability, raw preservation, Type 2 history, permissions, and rerun decisions are well reasoned.</td>
+<td style="text-align: right;">9 / 10</td>
+<td>Scheduling by recoverability, raw preservation, Type 2 history, permissions, notebook-versus-dbt scope, and rerun decisions are explained with practical trade-offs.</td>
 </tr>
 <tr class="odd">
 <td>Repository Organization</td>
 <td style="text-align: right;">3 / 5</td>
-<td>Week 8/Week 9 separation is visible, but broken links, missing resources/workflows, a starter dbt README/config, and legacy naming reduce clarity.</td>
+<td>The Week 8 README now has a clear filename and dbt/recovery notes are separated, but seven links are broken and the referenced workflow/resources remain missing.</td>
 </tr>
 <tr class="even">
 <td>Git Collaboration &amp; History</td>
-<td style="text-align: right;">7 / 10</td>
-<td>The preserved history contains 164 commits and 24 merges across 11 recorded author identities. The Week 9 change set is small and incomplete at the reviewed tip.</td>
+<td style="text-align: right;">8 / 10</td>
+<td>The preserved history contains 171 commits and 24 merges across 11 recorded identities. The seven-commit update improves documentation, while aliases and counts alone cannot show review quality.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="review-notes-29" class="anchored">REVIEW NOTES</h3>
-<p><strong>Checked locally:</strong> Git integrity passed. Twenty-three JSON/notebook assets, three YAML files, and three Python files parsed; seven local links are broken, including the parent README and missing <code>resources/traffic_advisory_daily.job.yml</code>. No <code>.github</code> workflow or <code>resources/</code> directory exists.</p>
-<p><strong>Could not check:</strong> <code>dbt</code> was not installed in the audit environment, and the committed dbt project retains starter documentation/configuration without a profile.</p>
-<p><strong>Saved evidence:</strong> Databricks run IDs and outcomes were not independently verified.</p>
-<p><strong>Version reviewed:</strong> <code>main</code> at <code>ac2ec6d4d78067b4688a1f362b80cb66dd92acdb</code></p>
+<p><strong>Checked locally:</strong> Git integrity passed. Twenty-nine tracked Python, JSON/notebook, and YAML assets parsed, while seven local Markdown links remain broken, including <code>resources/traffic_advisory_daily.job.yml</code> and root-level README references. No <code>.github</code> workflow or <code>resources/</code> directory exists.</p>
+<p><strong>Not tested:</strong> <code>dbt</code> was unavailable, so the stated 17-of-17 checks and run comparisons were reviewed only as saved claims and were not independently reproduced. Databricks job and run-ID claims were not independently checked.</p>
+<p><strong>Version reviewed:</strong> <code>main</code> at <code>8011f29fc405b258bbc181c120016dbbfa644ec5</code></p>
 <h1 id="practical-handoff-checklist">PRACTICAL HANDOFF CHECKLIST</h1>
 <p>Use this before the next repository handoff:</p>
 <ul class="task-list">
@@ -3402,7 +3404,7 @@ code { color: #3e3e3e; overflow-wrap: anywhere; }
 </ul>
 <h1 id="methodology-and-limitations">METHODOLOGY AND LIMITATIONS</h1>
 <p>The review covered repository documentation, code, configuration, test files, links, and Git history. Available local checks were run without changing the submitted systems. Databricks jobs and SQL that require class workspaces, data, catalogs, Volumes, warehouses, or credentials were not run.</p>
-<p>Saved run results, screenshots, and run IDs were reviewed as repository evidence. They are identified when they were not independently rerun. NYC 1 used documented pre-productionization commit cutoffs so Week 9 work did not affect Week 8 scores.</p>
+<p>Saved run results, screenshots, and run IDs were reviewed as repository evidence. They are identified when they were not independently rerun. NYC 1 used documented pre-productionization commit cutoffs so Week 9 work did not affect Week 8 scores. NYC 2 default branches were checked again on 26 September 2026. Groups C, D, E, and F were rescored at newer default-branch commits; Group A was rescored at its established canonical successor. The successor preserves the NYC 1 cutoff but not the retired extension commit, so the lineage is consolidation rather than a literal Git transfer.</p>
 <p>No administrative workbook content, personal contact information, passwords, credentials, or row-level personal data is reproduced. This is an independent review prepared for FTW Batch 12. It is not an official FTW Foundation or Accenture publication or employment assessment.</p>
 
 <script id="quarto-html-after-body" type="application/javascript">
